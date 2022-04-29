@@ -2,9 +2,8 @@
 // Sort the array elements alphabetically
 // Return the result
 
-function myFunction(arr) {
-  return arr.sort();
-}
+const  myFunction= (arr) => arr.sort();
+
 
 const arr = ['z', 'c', 'd', 'a', 'y', 'a', 'w'] 
 console.log(myFunction(arr));
