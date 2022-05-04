@@ -2,9 +2,8 @@
 // Create an object that has a property with key 'a' and a value of 'b'
 // Return the object
 
-const myFunction= (a,b) => {
-  return {[a]:b}
-}
+const myFunction= (a,b) => ({[a]:b})
+
 
 const a = 'v'
 const b = 'b'

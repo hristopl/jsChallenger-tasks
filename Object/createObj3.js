@@ -2,15 +2,7 @@
 // Create an object that has properties with keys 'a' and corresponding values 'b'
 // Return the object
 
-const myFunction = (a,b) => {
-  const obj = {}
-
-  a.forEach((el,index) => {
-    obj[el] = b[index]
-  })
-
-  return obj
-}
+const myFunction = (a,b) => a.reduce((result, curr , el) => ({...result, [curr] : b[el]}),{})
 
 const a = ['a','b','c'] 
 const b = [1,2,3]

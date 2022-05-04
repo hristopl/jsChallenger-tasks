@@ -1,6 +1,9 @@
-const myFunction = (arr,n)=> arr.split()
+// Write a function that takes an array (a) and a value (n) as argument
+// Return the nth element of 'a'
 
-const arr = [1,2,3,4,5]
-const n = 3
+const myFunction = (arr,n)=> arr[n-1]
+
+const arr = [10,9,8,7,6]
+const n = 5
 
 console.log(myFunction(arr,n));

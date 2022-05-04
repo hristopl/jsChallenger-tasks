@@ -2,15 +2,10 @@
 // Multiply all values of 'a' by 'b'
 // Return the resulting object
 
-const myFunction = (a,b) => {
-  for (let val in a){
-    a[val] *= b
-  }
+const myFunction = (a,b) => Object.entries(a).reduce((result, [key,val]) => ({...result, [key]: [val] * b}),{})
 
-  return a
-}
 
-const a = {j:9,i:2,x:3,z:4}
-const b = 10 
+const a = {w:15,x:22,y:13}
+const b = 6
 
 console.log(myFunction(a,b));

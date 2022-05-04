@@ -1,7 +1,12 @@
 const myFunction = obj => {
-return Object.keys(obj).reduce((acc, key) => {acc[key] = obj[key] === '' ? null : 
-obj[key]; return acc; }, {})
-
-}
+  return Object.entries(obj).reduce((acc, [key, val]) => ({
+    ...acc,
+    [key]: ['', ' '].includes(val) ? null : val})
+    , {})
+  }
+  
+  console.log(myFunction({ a: '', b: 'b', c: ' ', d: 'd' }))
+  
+  
 
 console.log(myFunction({ a: '', b: 'b', c: ' ', d: 'd' }))

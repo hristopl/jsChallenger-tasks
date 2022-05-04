@@ -9,12 +9,9 @@
 const myFunction = arr => {
   return arr.reduce((result,curr) => {
     const firstLetter = curr.charAt(0).toLowerCase()
-    // const {[firstLetter]: list,...rest} = result
-    // const nameList = list || []
     const nameList = result[firstLetter] || []
     console.log({result ,nameList, curr, firstLetter});
     return {...result,[firstLetter]: [...nameList,curr]}
-    // return {[firstLetter]: [...nameList,curr], ...rest}
   }, {})
 }
 
